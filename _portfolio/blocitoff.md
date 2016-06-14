@@ -2,7 +2,7 @@
 layout: post
 title: Blocitoff
 thumbnail-path: "img/blocitoff.png"
-short-description: Build a self-destructing to-do list application.
+short-description: A self-disruptive To-do list.
 
 ---
 
@@ -11,24 +11,30 @@ short-description: Build a self-destructing to-do list application.
 
 ## Explanation
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+Blocitoff Is a simple To-do list app using Ruby on Rails. It allows users to create lists of things they need to complete, with a self-disruptive that functions as way to help you complete your goals in 7 days or less.
 
 ## Problem
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+To-do lists are easily to make but harder to get them done when it comes to it. The "Ill just do it later" attitude always seems to arise when it comes to finishing off something we have put asside but Blocitoff hopes to help by implementing its self-disruptive feature.
 
 ## Solution
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+The self-disruptive feature in Blocitoff is implemented  to  automatically delete to-do item that weren't completed within 7 days of it being created. It is implemented by creating a rake task like so :
+
+
+{% highlight ruby %}
+desc "Delete Expired Items (7 days)"
+  task delete_items: :environment do
+    Item.where("created_at <= ?", Time.now - 7.days).destroy_all
+end
+{% endhighlight  %}
+
+
 
 ## Results
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
-
-> Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
-
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+As a result Blocitoff allows the user to create and manage their to-do items as well as encouraging the user to complete them before they expire. Blocitoff was my first project going solo and it allowed me to follow a User Story tool to complete the tasks that was ask for.
 
 ## Conclusion
 
-Bacon ipsum dolor amet filet mignon meatball spare ribs fatback bacon shankle. Kielbasa andouille fatback salami, boudin bresaola pig alcatra turkey spare ribs jerky. Corned beef bresaola leberkas salami alcatra beef landjaeger venison shank bacon meatloaf beef ribs picanha. Leberkas sausage brisket porchetta shankle prosciutto chicken picanha kielbasa pig kevin t-bone turducken filet mignon jowl.
+Bloccitoff was a good introduction to rake tasks that could be run manually or automatically. I also playing around with some Ajax to implement a more smooth experience when marking to-do items as complete.
