@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blocitoff
-thumbnail-path: "img/blocflix.png"
+title: Kele API Gem
+thumbnail-path: "img/gem.png"
 short-description: A self-disruptive To-do list.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocflix.png)
+![]({{ site.baseurl }}/img/gem.png)
 
 ## Explanation
 

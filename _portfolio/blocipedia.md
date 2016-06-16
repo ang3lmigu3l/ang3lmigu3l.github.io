@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Kele API
-thumbnail-path: "img/keleAPI.png"
+title: Blocipedia
+thumbnail-path: "img/blocipedia.png"
 short-description: Kele Gem API client to access the Bloc API.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/KeleAPI.png)
+![]({{ site.baseurl }}/img/Blocipedia.png)
 
 ## Explanation
 
