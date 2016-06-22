@@ -2,7 +2,7 @@
 layout: post
 title: Blocipedia
 thumbnail-path: "img/blocipedia.png"
-short-description: Kele Gem API client to access the Bloc API.
+short-description: A Wiki Publishing site with Premium Features.
 
 ---
 
