@@ -7,7 +7,7 @@ short-description: A Wiki Publishing site with Premium Features.
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/Blocipedia.png)
+![]({{ site.baseurl }}/img/blocipedia.png)
 
 ## Explanation
 
