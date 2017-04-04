@@ -15,7 +15,7 @@ Blocitoff Is a simple To-do list app using Ruby on Rails. It allows users to cre
 
 ## Problem
 
-To-do lists are easily to make but harder to get them done when it comes to it. The "Ill just do it later" attitude always seems to arise when it comes to finishing off something we have put asside but Blocitoff hopes to help by implementing its self-disruptive feature.
+To-do lists are easily to make but harder to get them done when it comes to it. The "Ill just do it later" attitude always seems to arise when it comes to finishing off something we have put aside but Blocitoff hopes to help by implementing its self-disruptive feature.
 
 ## Solution
 
