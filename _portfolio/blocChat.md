@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BlocTime
-thumbnail-path: "img/bloctime.png"
+title: BlocChat
+thumbnail-path: "img/blocChat.png"
 short-description: A Pomodoro style time manager.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/bloctime.png)
+![]({{ site.baseurl }}/img/blocChat.png)
 
 ## Explanation
 
