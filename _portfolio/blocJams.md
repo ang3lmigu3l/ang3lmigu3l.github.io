@@ -11,71 +11,16 @@ short-description: A Music Library Web App with music play.
 
 ## Explanation
 
-BlocJams is A Javascript digital music Spotify for listing to your favorite music . Refactored to Jquery.
-
+This musical library web application was built using HTML, CSS, Javascript and jQuery to produce an attractive, responsive, and easy-to-navigate website that can generate and play music from a library.
 ## Problem
 
-Blocipedia allows Premium users to create private wikis and collaborators. Colloborators could be Standard or Premium users. Some issues that arose when implementing this feature were:
+I had to take the look of the site into account, in addition to building a site that was easy to navigate and allowed users to find and play music. I built the site initially through vanilla HTML and CSS, then added functionality and animation with Javascript and the jQuery library. After it was complete, I refactored the code using AngularJS as a framework.
 
-> "How can a Standard User see Private wikis when added as a collaborator and only when they are collaborators to said wiki?" <br>
- "How Can a Premium user search for users to add to wikis as collaborator?"<br>
-  "How can i charge a monthly fee for Premium user?"
 
 ## Solution
 
-I was able to implement collaborators through using Has Many Through (HMT) model relationship.
-{% highlight ruby %}
-class User < ActiveRecord::Base
-  has_many :collaborators
-  has_many :wikis, through: :collaborators
-end
-{% endhighlight %}
-
-{% highlight ruby %}
-
-class Wiki < ActiveRecord::Base
-  belongs_to :user
-  has_many :collaborators
-  has_many :users, through: :collaborators
-{% endhighlight %}
-
-{% highlight ruby %}
-class Collaborator < ActiveRecord::Base
-  belongs_to :user
-  belongs_to :wiki
-end
-{% endhighlight %}
-
-This allowed me to properly add users as collaborators to specific wikis. But now how would a Premium user be able to search and add another user as a collaborator?
-For that I used a Form Option Helper `collection_select` to search through users and add them as a collaborator .
-
-{% highlight ruby %}
-<div class="form-group">
-  <%= f.label :Add_Collabs %>
-  <%= f.collection_select :user_id, @users, :id, :username %>
-  <%= f.submit "Save", class: 'btn btn-default' %>
-</div>
-{% endhighlight  %}
-
-Stripe Gem was used to implement the monthly fee for Premium users. When a user is initially charged as a Premium user, their User role is updated from Standard to Premium  in the Stripe Controller :
-{% highlight ruby %}
-current_user.role = 'premium'
-current_user.stripe_id = customer.id
-current_user.save
-
-{% endhighlight  %}
-Which then grants them permission to create private wikis and collaborator.
-## Results
-
-{:.center}
-![]({{ site.baseurl }}/img/collaborator.png)
-
- premium user is able to search through current users and chose them as collaborators to wikis with ease.
-
- {:.center}
- ![]({{ site.baseurl }}/img/private.png)
- User is able to create private wikis after upgrading to Premium
+The resulting website is attractive and responsive and functions much like a basic version of Spotify.
 
 ## Conclusion
 
-The Blocipedia project allowed me to learn about many new Gems like Stripe for charging users, Kaminari to implement pagination into wiki index and Devise to authenticate and create user sessions.
+This project was a terrific learning experience, allowing me to showcase basic front-end web-building skills and produce a product of which I can be proud.
