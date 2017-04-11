@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Blocipedia
-thumbnail-path: "img/blocipedia.png"
-short-description: A Wiki Publishing site with Premium Features.
+title: BlocJam
+thumbnail-path: "img/blocjams.png"
+short-description: A Music Library Web App with music play.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocipedia.png)
+![]({{ site.baseurl }}/img/blocjams.png)
 
 ## Explanation
 
-Blocipedia is a Rails app that allows Standard(free) or Premium(Paid) users to create and publish wikis for everyone to see . As a Premium user, you are able to create private wikis and add collaborators to your wikis for others to contribute them.
+BlocJams is A Javascript digital music Spotify for listing to your favorite music . Refactored to Jquery.
 
 ## Problem
 
