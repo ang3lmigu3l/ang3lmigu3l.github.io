@@ -1,13 +1,13 @@
 ---
 layout: post
 title: BlocJam
-thumbnail-path: "img/blocjams.jpg"
+thumbnail-path: "img/blocjams.png"
 short-description: A Music Library Web App with music play.
 
 ---
 
 {:.center}
-![]({{ site.baseurl }}/img/blocjams.jpg)
+![]({{ site.baseurl }}/img/blocjams.png)
 
 ## Explanation
 
